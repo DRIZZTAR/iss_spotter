@@ -9,5 +9,3 @@ const { fetchMyIP } = require('./iss');
 
   console.log('It worked! Returned IP:' , ip);
 });*/
-
-module.exports = { fetchMyIP };
