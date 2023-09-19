@@ -1,5 +1,3 @@
-// index.js
-
 const { nextISSTimesForMyLocation } = require('./iss');
 
 /** 
@@ -8,7 +6,7 @@ const { nextISSTimesForMyLocation } = require('./iss');
  *   [ { risetime: <number>, duration: <number> }, ... ]
  * Returns: 
  *   undefined
- * Sideffect: 
+ * Side effect: 
  *   Console log messages to make that data more human readable.
  *   Example output:
  *   Next pass at Mon Jun 10 2019 20:11:44 GMT-0700 (Pacific Daylight Time) for 468 seconds!
@@ -26,6 +24,9 @@ nextISSTimesForMyLocation((error, passTimes) => {
   if (error) {
     return console.log("It didn't work!", error);
   }
-  // success, print out the deets!
+  // success, print out the details!
   printPassTimes(passTimes);
 });
+
+
+module.exports = { printPassTimes };
